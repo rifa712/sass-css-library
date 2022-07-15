@@ -1,0 +1,62 @@
+// theme color
+
+/*
+NOTE : !default is used so the value can be changed
+for ex. in the sass/index.scss
+we defined new primary to indigo
+*/
+$primary: #326dee !default;
+$secondary: #1ac886 !default;
+$error: #d32752 !default;
+$info: #f6c31c !default;
+
+// colors
+$colors: (
+  'primary': $primary,
+  'secondary': $secondary,
+  'error': $error,
+  'info': $info,
+  'blue': #1919de,
+  'red': #e61919,
+  'yellow': #e6e619,
+  'green': #19e635,
+  'orange': #ffa600,
+  'purple': #9900ff,
+  'gray': #808080,
+  'black': black,
+  'white': white,
+);
+
+// @debug map-get($colors, 'purple');
+// @debug map-has-key($colors, 'primary');
+// @debug map-has-key($colors, 'haha');
+// @debug map-remove($colors, 'primary');
+// @debug map-merge(
+//   $colors,
+//   (
+//     'pink': #ffc0cb,
+//   )
+// );
+
+.test-button {
+  background-color: map-get($colors, 'purple');
+}
+
+// spacing
+$base-padding: 0.75em !default;
+$base-margin: 0.75em !default;
+
+// borders
+$base-border-thickness: 1px !default;
+$base-border-radius: 20px !default;
+
+// box-shhadow
+$base-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1) !default;
+
+// font-size
+$base-font-size: 1rem;
+$font-size-sm: $base-font-size * 0.75 !default;
+$font-size-md: $base-font-size * 1 !default;
+$font-size-lg: $base-font-size * 1.5 !default;
+$font-size-xl: $base-font-size * 2 !default;
+$font-size-xxl: $base-font-size * 3 !default;
